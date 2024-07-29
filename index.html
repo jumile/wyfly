@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WyFly</title>   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:wght@400;700&family=Play:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="../css/normalize.css" rel="stylesheet" >
+    <link href="css/wyfly_styles.css" rel="stylesheet" >
+    <link href="css/wyfly_calendar.css" rel="stylesheet" >
+
+    <script src="scripts/html5shiv.js"></script>
+    <script src="scripts/wyfly_scripts.js" defer></script> 
+    <script src="scripts/calendar.js" defer></script>   
+  </head>
+
+<body>
+  <div class="wrapper">
+    <div class="top">
+      <header class="header">
+        <div class="logo">
+          <img src="img/logo.png" width="96" height="63" alt="logo">
+        </div>
+        <nav>
+          <ul class="menu">
+            <li><a href="#" class="about">About us</a></li>
+            <li><a href="#" class="howuse">How to use</a></li>
+            <li><a href="#" class="wyfly">Wyfly API</a></li>
+            <li><a href="#" class="faq">FAQ</a></li>
+            <li><a href="#" class="contacts">Contacts</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="information">        
+        <form action="#" method="post" name="booking" id="booking">                   
+          <div class="destination">
+            <div class="from">
+              <label for="from">From:</label><br>
+              <select id="from" name="from" autofocus tabindex="1">
+                <option value="warsaw">Warsaw</option>
+                <option value="berlin">Berlin</option>
+                <option value="riga">Riga</option>
+                <option value="oslo">Oslo</option>
+                <option value="stockholm">Stockholm</option>
+              </select>
+            </div>
+            <span class="switch"></span>
+            <div class="to">
+              <label for="to">To:</label><br>
+              <select id="to" name="to" tabindex="5">
+                <option value="berlin">Berlin</option>
+                <option value="warsaw">Warsaw</option>
+                <option value="riga">Riga</option>
+                <option value="oslo">Oslo</option>
+                <option value="stockholm">Stockholm</option>
+              </select>
+            </div>
+          </div> <!-- /.destination -->
+
+          <div class="params">
+            <div class="flight right_border">
+              <label>
+                <input type="radio" name="flight" value="single" tabindex="10">
+                <span></span>Single flight
+              </label>
+              <label>
+                <input type="radio" name="flight" value="return" tabindex="15" checked>
+                <span></span>Return flight
+              </label>
+            </div>  
+            <div class="flight left_border">
+              <label> 
+                <input type="radio" name="class" value="economy" id="class1" tabindex="30" checked>
+                <span></span>Economy class
+              </label>
+              <label>
+                <input type="radio" name="class" value="business" id="class2" tabindex="35">
+                <span></span>Business class
+              </label>
+            </div>
+          </div>  <!-- /.params -->                
+
+          <div class="params2">
+            <div class="dates right_border">
+              <div class="dateFrom">
+                <label for="flyout">Fly out:</label><br>                
+                <input type="text" name="flyout" id="flyout" tabindex="20" class="date" placeholder="___.___.___" autocomplete="off">     
+                <table class="hid">
+                  <caption>
+                    <span class="prev">&lt;</span>
+                    <span class="caption"></span>
+                    <span class="next">&gt;</span>
+                  </caption>
+                  <thead>
+                    <tr>
+                      <td>Mo</td>
+                      <td>Tu</td>
+                      <td>We</td>
+                      <td>Th</td>
+                      <td>Fr</td>
+                      <td>Sa</td>
+                      <td>Su</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>      
+              </div>
+              <div class="dateBack">
+                <label for="flyback">Fly back:</label><br>
+                <input type="text" name="flyback" id="flyback" tabindex="25" class="date" placeholder="___.___.___" autocomplete="off">
+                <table class="hid">
+                  <caption>
+                    <span class="prev">&lt;</span>
+                    <span class="caption"></span>
+                    <span class="next">&gt;</span>
+                  </caption>
+                  <thead>
+                    <tr>
+                      <td>Mo</td>
+                      <td>Tu</td>
+                      <td>We</td>
+                      <td>Th</td>
+                      <td>Fr</td>
+                      <td>Sa</td>
+                      <td>Su</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>  
+              </div>
+            </div>   <!-- /.dates -->
+                        
+            <div class="counters left_border">
+              <div class="persons">
+                <div class="adults">
+                  <img src="img/adult_select.png" width="18" height="49" alt="1">
+                  <img src="img/adult.png" width="18" height="49" alt="2">
+                  <img src="img/adult.png" width="18" height="49" alt="3">
+                  <img src="img/adult.png" width="18" height="49" alt="4">
+                  <img src="img/adult.png" width="18" height="49" alt="5">
+                  <img src="img/adult.png" width="18" height="49" alt="6">
+                  <img src="img/adult.png" width="18" height="49" alt="7">
+                </div> <!-- /.adults -->
+              
+                <div class="childs">
+                  <div class="children right_border">
+                    children 2-12
+                    <ul>
+                      <li><a href="#" class="active">0</a></li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                    </ul>
+                  </div>                   
+                  <div class="babies">
+                    children &lt; 2
+                    <ul>
+                      <li><a href="#" class="active">0</a></li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                    </ul>
+                  </div>
+                </div> <!-- /.childs-->
+              </div> <!-- /.persons -->
+              
+              <div class="total">
+                <label>
+                  <input type="text" name="totalAdult" id="totalAdult" value="1">
+                  adults
+                </label>
+                <label>
+                  <input type="text" name="totalChilds" id="totalChilds" value="0">
+                  childs
+                </label>
+                <label>
+                  <input type="text" name="totalBabies" id="totalBabies" value="0">
+                  babies
+                </label>
+              </div>              
+            </div> <!-- /.counters-->
+          </div><!-- /.params2 -->       
+
+          <input type="button" name="search" id="search" value="Search">
+        </form>
+
+      </div> <!-- /.info -->
+    </div> <!--end of top-->
+
+    <div class="content">
+      <figure>
+        <img src="img/fig1.jpg" alt="изображение">
+        <figcaption>Specialy for U.S. citizens!<br>
+            The full list of countries, that are opened for citizens with United States passport. Visa is required.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fig2.jpg" alt="изображение">
+        <figcaption>We find the best deals on tickets. Prices include all fees and taxes. More than 1000 airlines and millions of flights.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fig3.jpg" alt="изображение">
+        <figcaption>Want to keep abreast of the latest news in the world of tourism, special deals of Airfare, our competitiones and raffles?</figcaption>
+      </figure>
+      <div class="email">
+        <h4>The first to know</h4>        
+        <form action="#" method="post" name="subscribe" class="subscribe">
+          <p>Special offers on flights, news, ideas for travel, competitions and much more.</p>
+          <input type="email" name="email" id="email" placeholder="your e-mail">
+          <label for="email">Your e-mail</label>
+          <input type="submit" name="subscribeButton" value="subscribe">
+        </form>
+      </div>
+    </div> <!--end of content-->
+    
+    <footer class="footer">      
+      <ul class="digits">
+        <li><span class="datas">157'299</span> flights booked </li>
+        <li><span class="datas">2'749</span> booked today </li>
+        <li><span class="datas">1'622'795</span> dollars saved </li>
+        <li><span class="datas">1'721</span> positive reviews</li>
+      </ul>
+      <div class="info">
+        <ul>
+          <li>for learn</li>
+          <li><a href="#">Cities +</a></li>
+          <li><a href="#">Airports</a></li>
+          <li><a href="#">countries +</a></li>
+          <li><a href="#">airlines</a></li>
+          <li><a href="#">Guides</a></li>
+        </ul>
+        <ul>
+          <li>searching tools tickets</li>
+          <li><a href="#">Affiliate program</a></li>
+          <li><a href="#">Set wyfly to your site</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Mobile Applications</a></li>
+          <li><a href="#">Version for mobile</a></li>
+        </ul>
+        <ul>
+          <li>company</li>
+          <li><a href="#">Privacy policy and use of cookie</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Media</a></li>
+        </ul>
+        <ul>
+          <li>help</li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>  
+      </div> <!-- /.info -->         
+    </footer>
+  </div> <!--end of wrapper-->
+</body>
+</html>
