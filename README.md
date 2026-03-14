@@ -8,4 +8,4 @@
   <li>Интерактивность: форма, фильтры</li>
 </ul>
 
-<p>Чтобы посмотреть сайт в браузере, перейдите <a href="jumile.github.io/wyfly/" target="_blank" rel="noopener noreferrer">по ссылке</a>.</p>
+<p>Чтобы посмотреть сайт в браузере, перейдите <a href="https://jumile.github.io/wyfly/" target="_blank" rel="noopener noreferrer">по ссылке</a>.</p>
